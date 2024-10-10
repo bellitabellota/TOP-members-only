@@ -97,3 +97,45 @@ main {
   margin-top: 30px;
   text-align: center;
 }
+
+
+
+
+/* css for post for */
+
+.post-form {
+  border: 1px solid rgb(51, 51, 51);
+  margin: 5rem auto;
+  width: fit-content;
+  padding: 10px 15px;
+}
+
+.field {
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#post_body {
+  width: 60vw;
+  height: 15rem;
+}
+
+.post-form .field:last-child {
+  display: flex;
+  justify-content: center;
+}
+
+.post-form .field:last-child input {
+  background-color: skyblue;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin: 5px;
+  font-weight: bold;
+}
