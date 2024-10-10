@@ -1,9 +1,10 @@
-<nav>
-  <% if user_signed_in? %>
-    <%= link_to "Create post", posts_new_path %>
-    <%= link_to "Log out", destroy_user_session_path, data: { turbo_method: :delete } %>
-  <% else %>
-    <%= link_to "Login", new_user_session_path %>
-    <%= link_to "Sign up", new_user_registration_path %>
+<main>
+  <h1>All posts</h1>
+  <% @posts.each do |post|%>
+  <div class="post" style="border: 1px solid grey">
+    <h2><%= post.title %></h2>
+    <p style="color: grey; font-size: 14px;">Author: <%= User.find(post.user_id).name %></p>
+    <p><%= post.body %></p>
+  </div>
   <% end %>
-</nav>
+</main>
