@@ -56,3 +56,44 @@ main {
   margin: 15px 0;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.247);
 }
+
+/* css for registration forms */
+
+.devise-forms {
+  border: 1px solid rgb(51, 51, 51);
+  margin: 5rem auto;
+  width: fit-content;
+  padding: 10px 15px;
+}
+
+.devise-forms h2 {
+  text-align: center;
+  margin: 5px;
+}
+
+.devise-forms .field {
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.devise-forms .actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.devise-forms .actions input {
+  background-color: skyblue;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+.already-member, .not-a-member {
+  font-size: 12px;
+  margin-top: 30px;
+  text-align: center;
+}
