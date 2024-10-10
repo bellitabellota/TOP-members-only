@@ -1,10 +1,24 @@
+<nav>
+  <% if user_signed_in? %>
+    <p><%= link_to "Create post", new_post_path %></p>
+    <p><%= link_to "Log out", destroy_user_session_path, data: { turbo_method: :delete } %></p>
+  <% else %>
+    <p><%= link_to "Login", new_user_session_path %></p>
+    <p><%= link_to "Sign up", new_user_registration_path %></p>
+  <% end %>
+</nav>
+
+<div class="notice">
+  <%= render "shared/notice_authentication_status" %>
+</div>
+
 <main>
-  <h1>All posts</h1>
+  <h1>Exclusive Clubhouse</h1>
   <% @posts.each do |post|%>
-  <div class="post" style="border: 1px solid grey">
+  <div class="post">
     <h2><%= post.title %></h2>
-    <p style="color: grey; font-size: 14px;">Author: <%= User.find(post.user_id).name %></p>
-    <p><%= post.body %></p>
+    <p class="author">Author: <%= User.find(post.user_id).name %></p>
+    <p class="post-body"><%= post.body %></p>
   </div>
   <% end %>
 </main>
